@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="https://stephanie-skincare.com/storage/2022/02/WhatsApp-Image-2022-01-19-at-14.32.08-870x503.jpeg" float="left"; width="300px"; height ="200px"></img>
+    <h1 style="color: blue; font-size: 24px;">Selamat Datang di Halaman Beranda</h1>
+    <a href="about.html">Tentang Kami</a>
+    
+    <!-- buka buku tamu -->
+    <button onclick="bukaBukuTamu()">Buka Buku Tamu</button>
+
+    <!-- Tabel untuk menampilkan data buku tamu -->
+    <h3>Data Buku Tamu</h3>
+    <table id="bukuTamuTable" border="1">
+        <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Pesan</th>
+        </tr>
+    </table>
+
+    <!-- Script JavaScript untuk buku tamu -->
+    <script>
+        function bukaBukuTamu() {
+            // Menampilkan alert untuk meminta input dari pengguna
+            let nama = prompt("Masukkan Nama Anda:");
+            let email = prompt("Masukkan Email Anda:");
+            let pesan = prompt("Masukkan Pesan Anda:");
+
+            // Menyimpan data di console browser
+            console.log("Nama: " + nama);
+            console.log("Email: " + email);
+            console.log("Pesan: " + pesan);
+
+            // Menambahkan data ke dalam tabel buku tamu
+            let table = document.getElementById("bukuTamuTable");
+            let row = table.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+
+            cell1.innerHTML = nama;
+            cell2.innerHTML = email;
+            cell3.innerHTML = pesan;
+        }
+    </script>
+</body>
+</html>
